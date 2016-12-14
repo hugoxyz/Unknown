@@ -1,0 +1,23 @@
+{
+  "name": "Unknown",
+  "version": "0.0.1",
+  "description": "unknow for now",
+  "main": "index.js",
+  "repository": {
+    "url": "git@github.com:hugoxyz/Unknown.git",
+    "type": "git"
+  },
+  "author": "hugo <hugohuang1111@gmail.com>",
+  "devDependencies": {
+    "babel-core": "^6.20.0",
+    "babel-loader": "^6.2.9",
+    "babel-preset-latest": "^6.16.0",
+    "electron": "^1.4.12",
+    "webpack": "^1.14.0"
+  },
+  "scripts": {
+    "start": "electron app",
+    "develop": "webpack -w",
+    "build": "NODE_ENV=production webpack -w"
+  }
+}

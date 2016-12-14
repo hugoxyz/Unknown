@@ -1,0 +1,11 @@
+{
+  "name": "Unknown",
+  "version": "0.0.1",
+  "description": "unknow for now",
+  "main": "dist/main.js",
+  "repository": {
+    "url": "git@github.com:hugoxyz/Unknown.git",
+    "type": "git"
+  },
+  "author": "hugo <hugohuang1111@gmail.com>"
+}
