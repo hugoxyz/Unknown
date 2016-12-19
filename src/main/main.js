@@ -1,4 +1,4 @@
-import {app, globalShortcut} from 'electron';
+import {app, globalShortcut, BrowserWindow} from 'electron';
 import * as window from './services/window';
 import * as application from './services/application';
 

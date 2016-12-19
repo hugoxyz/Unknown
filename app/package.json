@@ -7,5 +7,6 @@
     "url": "git@github.com:hugoxyz/Unknown.git",
     "type": "git"
   },
-  "author": "hugo <hugohuang1111@gmail.com>"
+  "author": "hugo <hugohuang1111@gmail.com>",
+  "dependencies": {}
 }

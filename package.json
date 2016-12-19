@@ -12,12 +12,17 @@
     "babel-core": "^6.20.0",
     "babel-loader": "^6.2.9",
     "babel-preset-latest": "^6.16.0",
+    "babel-preset-react": "^6.16.0",
     "electron": "^1.4.12",
     "webpack": "^1.14.0"
   },
   "scripts": {
     "start": "electron app",
-    "develop": "webpack -w",
+    "webpackw": "webpack -w",
     "build": "NODE_ENV=production webpack -w"
+  },
+  "dependencies": {
+    "react": "^15.4.1",
+    "react-dom": "^15.4.1"
   }
 }

@@ -9,6 +9,9 @@ export default (function () {
   let config = [
     {
       target: 'electron',
+      node: {
+        __dirname: false
+      },
       entry: {
         main: './src/main/main.js'
       },
@@ -28,7 +31,7 @@ export default (function () {
       plugins: []
     },
     {
-      target: 'web',
+      target: 'electron-renderer',
       entry: {
         renderer: './src/renderer/index.js'
       },
@@ -39,7 +42,7 @@ export default (function () {
       module: {
         loaders: [
           {
-            test: /\.js$/,
+            test: /\.jsx?$/,
             exclude: /node_modules/,
             loader: 'babel-loader',
           }
