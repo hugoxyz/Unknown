@@ -14,15 +14,20 @@
     "babel-preset-latest": "^6.16.0",
     "babel-preset-react": "^6.16.0",
     "electron": "^1.4.12",
+    "jsx-loader": "^0.13.2",
     "webpack": "^1.14.0"
   },
   "scripts": {
     "start": "electron app",
-    "webpackw": "webpack -w",
-    "build": "NODE_ENV=production webpack -w"
+    "pack": "webpack",
+    "packw": "webpack -w",
+    "build": "NODE_ENV=production webpack"
   },
   "dependencies": {
     "react": "^15.4.1",
-    "react-dom": "^15.4.1"
+    "react-dom": "^15.4.1",
+    "react-redux": "^5.0.1",
+    "react-router": "^3.0.0",
+    "redux": "^3.6.0"
   }
 }
