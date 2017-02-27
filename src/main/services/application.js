@@ -1,9 +1,12 @@
-import { join } from 'path';
-import { create } from './window';
+import os from 'os';
+import path from 'path';
+import {
+    create
+} from './window';
 
 export function init(opt) {
-  const win = create(opt);
-  win.loadURL(`file://${join(__dirname, '..', 'pages')}/index.html`);
+    const win = create(opt);
+    win.loadURL(`file://${path.join(__dirname, '..', 'pages')}/index.html`);
 
-  return win;
+    return win;
 }

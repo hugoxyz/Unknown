@@ -1,0 +1,12 @@
+
+.win {
+    display: flex;
+}
+
+.treePanel {
+    flex: 0 0 400px;
+}
+
+.gamePanel {
+    flex: 0 0 100px;
+}
