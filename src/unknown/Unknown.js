@@ -19,6 +19,10 @@ import {
 } from './components/SpriteRendererInfo';
 
 import {
+    Name
+} from './components/Name';
+
+import {
     RegisterTables
 } from './utils/RegisterTables';
 
@@ -76,6 +80,7 @@ class Unknown {
 
         classes['Transform'] = Transform;
         classes['SpriteRendererInfo'] = SpriteRendererInfo;
+        classes['Name'] = Name;
     }
 
     static getClass(name) {

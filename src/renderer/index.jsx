@@ -6,6 +6,7 @@ import injectTapEventPlugin from 'react-tap-event-plugin';
 // import { Router, Route, IndexRoute, browserHistory, hashHistory } from 'react-router';
 import store from './redux/store/Store';
 import Route from './router/RouteList';
+import { Action } from './redux/action';
 
 import { Unknown } from '../unknown/Unknown';
 
@@ -24,5 +25,10 @@ ReactDOM.render(
 
 Unknown.init();
 Unknown.world.entityAdded('Transform').add((entity) => {
-    console.log(entity);
+    let info = {
+        id: entity.id,
+        name: entity.getComponent('Name').d
+    }
+    console.log(info)
+    store.dispatch(Action.EntityAction.entityAdd(info))
 })

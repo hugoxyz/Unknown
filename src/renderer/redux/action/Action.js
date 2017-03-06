@@ -1,4 +1,8 @@
 const ActionType = {
+    ENTITY: {
+        ADD: 'EntityAdd',
+        REMOVE: 'EntityRemove'
+    },
     gamePanel: {
         AdjustRect: 'AdjustRect'
     }

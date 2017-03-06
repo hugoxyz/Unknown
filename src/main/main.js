@@ -1,23 +1,30 @@
-import {app, globalShortcut, BrowserWindow} from 'electron';
+import {
+  app,
+  globalShortcut,
+  BrowserWindow
+} from 'electron';
 import * as window from './services/window';
 import * as application from './services/application';
 
 app.on('ready', () => {
-    /*
-     * register short key
-     */
-    const ret = globalShortcut.register('f12', () => {
-        let win = BrowserWindow.getFocusedWindow();
-        if (!win) return;
-        win.webContents.toggleDevTools();
-    })
+  /*
+   * register short key
+   */
+  const ret = globalShortcut.register('f12', () => {
+    let win = BrowserWindow.getFocusedWindow();
+    if (!win) return;
+    win.webContents.toggleDevTools();
+  })
 
-    if (!ret) {
-        console.log('registration f12 failed')
-    }
+  if (!ret) {
+    console.log('registration f12 failed')
+  }
 
-    console.log('>>>>>>>>> Unknown App Launch <<<<<<<<<');
-    application.init();
+  console.log('>>>>>>>>> Unknown App Launch <<<<<<<<<');
+  application.init({
+    width: 1000,
+    height: 600
+  });
 });
 
 app.on('window-all-closed', () => {
@@ -25,13 +32,13 @@ app.on('window-all-closed', () => {
 });
 
 app.on('activate', () => {
-    if (0 == window.getCount()) {
-        application.init();
-    }
+  if (0 == window.getCount()) {
+    application.init();
+  }
 });
 
 app.on('will-quit', () => {
-    globalShortcut.unregisterAll()
+  globalShortcut.unregisterAll()
 })
 
 app.on('quit', () => {
@@ -42,4 +49,3 @@ global.services = {
   application,
   window,
 };
-

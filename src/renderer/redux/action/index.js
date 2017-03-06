@@ -1,17 +1,23 @@
 import {
-    GamePanelActionTypes,
-    GamePanelActions
+    EntityActionType,
+    EntityAction
+} from './EntityAction';
+import {
+    GamePanelActionType,
+    GamePanelAction
 } from './GamePanelAction';
 
-let ActionTypes = {
-    GamePanelActionTypes: GamePanelActionTypes
+let ActionType = {
+    EntityActionType: EntityActionType,
+    GamePanelActionType: GamePanelActionType
 }
 
-let Actions = {
-    GamePanelActions: GamePanelActions
+let Action = {
+    EntityAction: EntityAction,
+    GamePanelAction: GamePanelAction
 }
 
 export {
-    ActionTypes,
-    Actions
+    ActionType,
+    Action
 }

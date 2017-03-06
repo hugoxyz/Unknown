@@ -1,8 +1,11 @@
 import {
     createStore,
-    combineReducers,
     applyMiddleware
 } from 'redux';
+import {
+    combineReducers
+} from 'redux-immutable';
+
 import * as reducer from '../reducer/reducer';
 import thunk from 'redux-thunk';
 

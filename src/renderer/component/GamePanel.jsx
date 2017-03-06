@@ -23,7 +23,8 @@ class GamePanel extends React.Component {
                     'Transform': null,
                     'SpriteRendererInfo': {
                         'img': f.path
-                    }
+                    },
+                    'Name': 'new'
                 })
             }
             return false;
