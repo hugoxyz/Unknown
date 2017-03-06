@@ -78,6 +78,10 @@ class EntityChain {
         return this._entities[entity.id] !== undefined;
     }
 
+    get(id) {
+        return this._entities[id].entity;
+    }
+
     clear() {
         this._head = this._tail = null;
         this._length = 0;

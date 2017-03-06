@@ -2,8 +2,11 @@ import {
     ActionType,
     Action
 } from '../action';
+import Immutable from 'immutable';
 
-export const config = (state = {}, action = {}) => {
+const initState = Immutable.fromJS({});
+
+export const config = (state = initState, action = {}) => {
     const Type = ActionType.windowsActionType;
     switch (action.type) {
         // case Types.SetConfig:
@@ -16,22 +19,25 @@ export const config = (state = {}, action = {}) => {
     }
 }
 
-export const entitys = (state = {}, action = {}) => {
+export const entitys = (state = initState, action = {}) => {
     const Type = ActionType.EntityActionType;
     switch (action.type) {
         case Type.EntityAdd:
             {
-                state
+                return state.set(action.entity.id, action.entity);
+            }
+        case Type.EntitySelected:
+            {
+                return state.set('entitySelected', action.entityId);
             }
         default:
             {
                 return state;
             }
     }
-
 }
 
-export const gamePanel = (state = {}, action = {}) => {
+export const gamePanel = (state = initState, action = {}) => {
     const Type = ActionType.GamePanelActionType;
     switch (action.type) {
         case Type.AdjustRect:

@@ -7,6 +7,7 @@ import injectTapEventPlugin from 'react-tap-event-plugin';
 import store from './redux/store/Store';
 import Route from './router/RouteList';
 import { Action } from './redux/action';
+import Immutable from 'immutable';
 
 import { Unknown } from '../unknown/Unknown';
 
@@ -25,10 +26,9 @@ ReactDOM.render(
 
 Unknown.init();
 Unknown.world.entityAdded('Transform').add((entity) => {
-    let info = {
+    const info = Immutable.fromJS({
         id: entity.id,
         name: entity.getComponent('Name').d
-    }
-    console.log(info)
-    store.dispatch(Action.EntityAction.entityAdd(info))
+    });
+    store.dispatch(Action.EntityAction.entityAddAct(info))
 })

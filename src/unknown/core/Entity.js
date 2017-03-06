@@ -27,6 +27,19 @@ class Entity {
         this._components[Entity._compNamePre + componentName] = undefined;
         this.onComponentRemoved.dispatch(this, componentName, removedComponent);
     }
+
+    dump() {
+        let info = {
+            id: this.id
+        }
+        for (const k in this._components) {
+            if (this._components.hasOwnProperty(k)) {
+                info[k.replace(Entity._compNamePre, "")] = this._components[k].d;
+            }
+        }
+
+        return info
+    }
 };
 
 Entity._id = 0;

@@ -32,9 +32,10 @@ class Win extends React.Component {
     render() {
         return (
             <div className={styles.win}>
-                <TreePanel width="150" height={this.state.winSize.h} />
+                <TreePanel width="150" height={this.state.winSize.h} entitys={this.props.entitys}
+                    entitySelectedAct={this.props.entitySelectedAct} />
                 <GamePanel width={this.state.winSize.w-300} height={this.state.winSize.h} />
-                <PropertyPanel width="150" height={this.state.winSize.h}/>
+                <PropertyPanel width="150" height={this.state.winSize.h} entitySelected={this.props.entitySelected}/>
             </div>
             );
     }

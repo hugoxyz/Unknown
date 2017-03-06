@@ -1,19 +1,21 @@
 import React from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-import { Actions } from '../redux/action/Action';
+import { ActionType, Action } from '../redux/action';
 import { Win } from '../component/Win';
 
 function mapStateToProps(state) {
     console.log('mapStateToProps:%O', state);
+
     return {
-        counter: state.counter,
+        entitys: state.get('entitys'),
+        entitySelected: state.get('entitySelected'),
         size: { width: 256, height: 256}
     };
 }
 
 function mapDispatchToProps(dispatch) {
-    return bindActionCreators(Actions, dispatch);
+    return bindActionCreators(Action.EntityAction, dispatch);
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(Win);

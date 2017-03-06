@@ -21,8 +21,13 @@ class List extends React.Component {
         const items = [];
         if (this.props.items) {
             let i = 0;
-            this.props.items.forEach((item) => {
-                items.push(<div key={i} onClick={() => {this.click(item)}} > {item.text} </div>);
+            this.props.items.entrySeq().forEach((seq) => {
+                const key = seq[0]
+                const item = seq[1]
+                if (key == 'entitySelected') {
+                    return
+                }
+                items.push(<div key={item.get('id')} onClick={() => {this.click(item)}} > {item.get('name')} </div>);
                 i++;
             })
         }

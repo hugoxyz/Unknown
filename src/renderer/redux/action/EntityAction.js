@@ -1,6 +1,7 @@
 let ActionType = {
     EntityAdd: 'EntityAdd',
-    EntityRemove: 'EntityRemove'
+    EntityRemove: 'EntityRemove',
+    EntitySelected: 'EntitySelected'
 };
 
 let Action = {};
@@ -8,7 +9,7 @@ let Action = {};
 /*
  * v: {name:'name', id:1}
  */
-Action.entityAdd = function(v) {
+Action.entityAddAct = function(v) {
     return {
         type: ActionType.EntityAdd,
         entity: v
@@ -18,10 +19,20 @@ Action.entityAdd = function(v) {
 /*
  * v: {name:'name', id:1}
  */
-Action.entityRemove = function(v) {
+Action.entityRemoveAct = function(v) {
     return {
         type: ActionType.EntityRemove,
         entity: v
+    }
+}
+
+/*
+ * v: id
+ */
+Action.entitySelectedAct = function(v) {
+    return {
+        type: ActionType.EntitySelected,
+        entityId: v
     }
 }
 

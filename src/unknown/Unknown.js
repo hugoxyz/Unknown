@@ -75,6 +75,11 @@ class Unknown {
         Unknown.world.addEntity(e);
     }
 
+    static getEntityInfo(id) {
+        const entity = Unknown.world.getEntityById(id);
+        return entity.dump();
+    }
+
     static registerClasses() {
         let classes = Unknown.registerTables.table('classes', true);
 

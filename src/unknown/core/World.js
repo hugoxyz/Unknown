@@ -85,6 +85,10 @@ class World {
         return this._families[familyId].getEntities();
     }
 
+    getEntityById(id) {
+        return this._entities.get(id);
+    }
+
     /**
      * For each system in the world, call its `update` method.
      * @public
