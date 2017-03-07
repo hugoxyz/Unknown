@@ -32,7 +32,7 @@ Action.entityRemoveAct = function(v) {
 Action.entitySelectedAct = function(v) {
     return {
         type: ActionType.EntitySelected,
-        entityId: v
+        entityInfo: v
     }
 }
 

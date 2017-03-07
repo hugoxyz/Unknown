@@ -9,7 +9,6 @@ function mapStateToProps(state) {
 
     return {
         entitys: state.get('entitys'),
-        entitySelected: state.get('entitySelected'),
         size: { width: 256, height: 256}
     };
 }

@@ -28,7 +28,7 @@ export const entitys = (state = initState, action = {}) => {
             }
         case Type.EntitySelected:
             {
-                return state.set('entitySelected', action.entityId);
+                return state.set('entitySelected', action.entityInfo);
             }
         default:
             {

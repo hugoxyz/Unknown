@@ -31,10 +31,13 @@ class PropertyPanel extends React.Component {
         }
         let comps = [];
         let i = 0;
-        this.props.entitySelected.entrySeq.forEach((seq) => {
+        this.props.entitySelected.entrySeq().forEach((seq) => {
             const compName = seq[0]
             const compInfo = seq[1]
-            comps.push(<Transform key={i} compInfo={compInfo} compName={compName} />);
+            console.log(`key: ${compName} v: ${compInfo}`)
+            if ('Transform' == compName) {
+                comps.push(<Transform key={i} compInfo={compInfo} compName={compName} />);
+            }
             i++;
         })
         // for (var compName in this.props.entitySelected){

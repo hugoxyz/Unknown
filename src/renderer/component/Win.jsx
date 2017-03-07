@@ -35,7 +35,7 @@ class Win extends React.Component {
                 <TreePanel width="150" height={this.state.winSize.h} entitys={this.props.entitys}
                     entitySelectedAct={this.props.entitySelectedAct} />
                 <GamePanel width={this.state.winSize.w-300} height={this.state.winSize.h} />
-                <PropertyPanel width="150" height={this.state.winSize.h} entitySelected={this.props.entitySelected}/>
+                <PropertyPanel width="150" height={this.state.winSize.h} entitySelected={this.props.entitys.get('entitySelected')}/>
             </div>
             );
     }
